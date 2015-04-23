@@ -1,5 +1,6 @@
 // Write a program that asks the user for a number n and
 // prints the product of the numbers 1 to n
+// Only consider the numbers divisible by three or five in the sum.
 import java.io.Console;
 
 public class Factorial {
