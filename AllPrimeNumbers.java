@@ -7,35 +7,27 @@ public class AllPrimeNumbers {
   public static void main(String []arges) {
 
     Console cons = System.console();
-    int maxValue = Integer.MAX_VALUE;
+    int maxValue = 10000000;//Integer.MAX_VALUE;
     //int p = 1;
 
     //p = Integer.parseInt(cons.readLine("is prime  "));
 
-    for (int p = 2; p < maxValue; p++) {
+    for (int p = 3; p < maxValue; p++) {
 
-      isPrime(p, cons);
+      if (isPrime(p)) {
+        cons.printf("%d\n", p);
+      }
     }
   }
 
-  public static boolean isPrime(int p, Console cons) {
-    boolean flag = false;
+  public static boolean isPrime(int p) {
 
     for (int i = 2; i < p; i++) {
       if ( p % i == 0) {
-        //cons.printf("%d divisible by %d\n", p, i);
-        //cons.printf("%d is not a prime number\n", p);
-        flag = false;
-        break;
+        return false;
       }
-      flag = true;
     }
-
-    if (flag) {
-      cons.printf("%d is a prime number\n", p);
-    }
-
-    return flag;
+    return true;
   }
 
 }
