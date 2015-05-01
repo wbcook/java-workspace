@@ -7,7 +7,9 @@ public class PrimeNumbers {
     Console cons = System.console();
     int p;
     boolean flag = false;
+
     p = Integer.parseInt(cons.readLine("is prime  "));
+
     for (int i = 2; i < p; i++) {
       if ( p % i == 0) {
         cons.printf("%d divisible by %d\n", p, i);
@@ -17,13 +19,10 @@ public class PrimeNumbers {
       }
       flag = true;
     }
+
     if (flag) {
       cons.printf("%d is a prime number\n", p);
     }
-    //int maxValue = 10;//Integer.MAX_VALUE;
-    //for (int p = 1; p <= maxValue; p++) {
-      //for (int m = 2; m < p; m++) {
-      //}
-    //}
+
   }
 }
