@@ -2,7 +2,7 @@
 import java.io.Console;
 
 public class PrimeNumbers {
-  public static void main(String []arges) {
+  public static void main(String []args) {
 
     Console cons = System.console();
     int p;

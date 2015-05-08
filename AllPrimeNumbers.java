@@ -4,7 +4,7 @@
 import java.io.Console;
 
 public class AllPrimeNumbers {
-  public static void main(String []arges) {
+  public static void main(String []args) {
 
     Console cons = System.console();
     int maxValue = 10000000;//Integer.MAX_VALUE;
