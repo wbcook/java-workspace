@@ -16,20 +16,22 @@ public class FizzBuzzArray {
   }
 
   public static String[] fizzBuzzArrayBuilder(String[] fizzBuzzArray, int range) {
-    int range = 100;
-    for (int i = 1; i <= range; i++) {
-      int n = i-1;
-      if (i % 15 == 0) {
+
+    if (range == 0) {
+      return fizzBuzzArray;
+    } else {
+      range -= 1;
+      if (range % 15 == 0) {
         fizzBuzzArray[n] = "FizzBuzz!";
-      } else if ( i % 3 == 0) {
+      } else if (range % 3 == 0) {
         fizzBuzzArray[n] = "Fizz";
-      } else if ( i % 5 == 0) {
+      } else if (range % 5 == 0) {
         fizzBuzzArray[n] = "Buzz";
       } else {
         fizzBuzzArray[n] = Integer.toString(i);
       }
+      fizzBuzzArrayBuilder(fizzBuzzArray, range);
     }
-    return fizzBuzzArray;
   }
 
   public static void fizzBuzzArrayPrinter(String[] fizzBuzzArray) {
