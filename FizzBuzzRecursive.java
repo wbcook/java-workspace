@@ -5,7 +5,7 @@
 import java.io.Console;
 import java.util.Arrays;
 
-public class FizzBuzzArray {
+public class FizzBuzzRecursive {
   public static void main(String []args) {
     String[] fizzBuzzArray = new String[100];
     int range = 100;
@@ -22,15 +22,15 @@ public class FizzBuzzArray {
     } else {
       range -= 1;
       if (range % 15 == 0) {
-        fizzBuzzArray[n] = "FizzBuzz!";
+        fizzBuzzArray[range] = "FizzBuzz!";
       } else if (range % 3 == 0) {
-        fizzBuzzArray[n] = "Fizz";
+        fizzBuzzArray[range] = "Fizz";
       } else if (range % 5 == 0) {
-        fizzBuzzArray[n] = "Buzz";
+        fizzBuzzArray[range] = "Buzz";
       } else {
-        fizzBuzzArray[n] = Integer.toString(i);
+        fizzBuzzArray[range] = Integer.toString(range);
       }
-      fizzBuzzArrayBuilder(fizzBuzzArray, range);
+      return fizzBuzzArrayBuilder(fizzBuzzArray, range);
     }
   }
 
