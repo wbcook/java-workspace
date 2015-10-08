@@ -1,2 +1,2 @@
-# java-progs
+# java-workspace
 JAVA practice programs.
